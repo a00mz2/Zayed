@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "320102505862",
+    "project_id": "zayed-5f25b",
+    "storage_bucket": "zayed-5f25b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:320102505862:android:748cee22916ff841266007",
+        "android_client_info": {
+          "package_name": "com.example.zayed"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXvGfbHdenAzQP_OuCW_H6F5arqdp3g-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
