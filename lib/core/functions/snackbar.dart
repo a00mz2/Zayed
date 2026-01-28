@@ -4,22 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-// void showSnackBar(BuildContext context) {
-//   final snackBar = SnackBar(
-//     elevation: 0,
-//     behavior: SnackBarBehavior.floating,
-//     backgroundColor: Colors.transparent,
-//     content: AwesomeSnackbarContent(
-//       title: 'نجاح!',
-//       message: 'تم حفظ البيانات بنجاح 🎉',
-//       contentType: ContentType.success,
-//     ),
-//   );
-
-//   ScaffoldMessenger.of(context)
-//     ..hideCurrentSnackBar()
-//     ..showSnackBar(snackBar);
-// }
+ 
 
 enum ContentType { success, failure, warning, help }
 

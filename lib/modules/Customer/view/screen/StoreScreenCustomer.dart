@@ -8,6 +8,8 @@ import 'package:zayed/view/Widget/widgetApp/ScaffoldWidget.dart';
 import 'package:zayed/view/Widget/widgetApp/viewerImageWidget.dart';
 import 'package:zayed/view/Widget/widgetApp/ExpandableTextWidget.dart';
 
+import '../../../../core/functions/GuidanceExternalapp.dart';
+
 class StoreScreenCustomer extends StatelessWidget {
   StoreScreenCustomer({super.key});
 
@@ -216,7 +218,7 @@ class StoreScreenCustomer extends StatelessWidget {
       children: [
         Expanded(
           child: BouncingWidget(
-            onPressed: () {},
+            onPressed: () => openWhatsAppToPhone(phone:controller.storeDetails['phone']),
             child: Container(
               alignment: Alignment.center,
               padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
@@ -225,9 +227,10 @@ class StoreScreenCustomer extends StatelessWidget {
                 color: Color(0xffF6F6F6),
                 borderRadius: BorderRadius.circular(100),
               ),
-
               child: Text(
                 "${controller.storeDetails['phone']} (964+)",
+                overflow: TextOverflow.ellipsis,
+                maxLines: 1,
                 style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                   color: Color(0xff0E0E0E),
                   fontWeight: MyFontWeight.regular,
@@ -240,7 +243,10 @@ class StoreScreenCustomer extends StatelessWidget {
         SizedBox(width: 8),
         Expanded(
           child: BouncingWidget(
-            onPressed: () {},
+            onPressed: () => openInMapsFromData({
+              "lat": controller.storeDetails['location']['lat'],
+              "lng": controller.storeDetails['location']['lng'],
+            }),
             child: Container(
               alignment: Alignment.center,
               padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
@@ -249,11 +255,13 @@ class StoreScreenCustomer extends StatelessWidget {
                 color: Color(0xffF6F6F6),
                 borderRadius: BorderRadius.circular(100),
               ),
-
               child: Text(
-                "${controller.storeDetails['phone']} (964+)",
+                "${controller.storeDetails['address']}",
+                overflow: TextOverflow.ellipsis,
+                maxLines: 1,
                 style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                   color: Color(0xff0E0E0E),
+                  decoration: TextDecoration.underline,
                   fontWeight: MyFontWeight.regular,
                   fontSize: 14,
                 ),
